@@ -98,7 +98,7 @@
         %>
     </table>
 </div>
-<footer class="footer">
+    <footer class="footer">
         <div class="footer_columna">
             <h4>MathUP</h4>
             <ul>
