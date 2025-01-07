@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="../assets/Imagenes/Logo.png">
+    <title>MathUP</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+   
+</head>
+<body class="body">
+    <header>
+        <a class="logo" href="home.html"><img src="../assets/Imagenes/MathUP.png" alt="logo"></a>
+        <div class="social-icon">
+            <a href="https://www.google.com/" target="_blank"><i class="fa fa-search"></i></a>
+            <a href="https://www.instagram.com/math_up0/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61561506939201" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/MathUP0" target="_blank"><i class="fa fa-twitter"></i></a>
+        </div>
+        <a class="btn btn-default" href="login.html">Iniciar Sesión</a>
+    </header>
+
+    <div class="navbar">
+        <a class="navbar-opcion" href="home.html">Inicio</a>
+        <a class="navbar-opcion" href="about.html">Sobre Nosotros</a>
+    </div> <!-- Fin Navbar -->
+
+    <main class="main main-login-general">
+        <div class="contenedor-login">
+            <form action="../backend/login.jsp" class="clase-form">
+                <h2>Inicio de Sesión</h2>
+                <label for="Correo">Correo:</label>
+                <input class="text-area" type="text" id="Correo" name="Correo" required><br/><br/>
+                
+                <label for="Contraseña">Contraseña:</label>
+                <input class="text-area" type="text" id="Contraseña" name="Contraseña" required>
+                
+                <div class="icono-seleccion">
+                    <div class="icono-seleccion-grupo">
+                        <label for="Estudiante">Estudiante</label>
+                        <input type="radio" id="Estudiante" name="op_login" value="1" required>
+                    </div>
+                    
+                    <div class="icono-seleccion-grupo">
+                        <label for="Profesor">Profesor</label>
+                        <input type="radio" id="Profesor" name="op_login" value="2" required>
+                    </div>
+                    
+                    <div class="icono-seleccion-grupo">
+                        <label for="Administrador">Administrador</label>
+                        <input type="radio" id="Administrador" name="op_login" value="3" required>
+                    </div>
+                </div>
+                
+                <input class="btn btn-default" type="submit" value="Iniciar Sesión"></input>
+                <br><br>
+                <p style="color: rgba(0, 0, 0, 0.40);">¿Olvidaste tu contraseña?</p>
+                <p style="color: rgba(0, 0, 0, 0.40);">Registrarse</p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_columna">
+            <h4>MathUP</h4>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer_columna">
+            <h4>Derechos Reservados</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus esse magnam quis mollitia temporibus blanditiis, quia aliquid rerum sint exercitationem reiciendis nisi placeat itaque fuga dignissimos ipsam accusantium quasi officiis.</p>
+        </div>
+        <div class="footer_columna">
+            <h4>Perfil</h4>
+            <ul>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

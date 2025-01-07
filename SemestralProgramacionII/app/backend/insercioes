@@ -1,0 +1,101 @@
+BEGIN
+    insertar_admins('Carlos', 'Martinez', TO_DATE('1985-07-20', 'YYYY-MM-DD'), 'carlos.martinez@example.com', 'password456', 62345678); 
+    insertar_admins('Ana', 'Lopez', TO_DATE('1990-11-10', 'YYYY-MM-DD'), 'ana.lopez@example.com', 'securePass789', 63456789);
+    insertar_admins('Pedro', 'Gonzalez', TO_DATE('1988-03-15', 'YYYY-MM-DD'), 'pedro.gonzalez@example.com', 'admin123', 64567890);
+    insertar_admins('Lucia', 'Fernandez', TO_DATE('1992-09-25', 'YYYY-MM-DD'), 'lucia.fernandez@example.com', 'luciaPass', 65678901);
+    insertar_admins('Miguel', 'Ramirez', TO_DATE('1983-11-30', 'YYYY-MM-DD'), 'miguel.ramirez@example.com', 'miguelPass', 66789012);
+END;
+/
+
+BEGIN
+    insertar_usuarios('Juan', 'Perez', TO_DATE('1990-01-15', 'YYYY-MM-DD'), 'jperez', 'juan.perez@example.com', 'juan123');
+    insertar_usuarios('Maria', 'Gomez', TO_DATE('1985-02-20', 'YYYY-MM-DD'), 'mgomez', 'maria.gomez@example.com', 'maria456');
+    insertar_usuarios('Luis', 'Sanchez', TO_DATE('1992-03-25', 'YYYY-MM-DD'), 'lsanchez', 'luis.sanchez@example.com', 'luis789');
+    insertar_usuarios('Laura', 'Diaz', TO_DATE('1987-04-30', 'YYYY-MM-DD'), 'ldiaz', 'laura.diaz@example.com', 'laura123');
+    insertar_usuarios('Carlos', 'Garcia', TO_DATE('1995-05-05', 'YYYY-MM-DD'), 'cgarcia', 'carlos.garcia@example.com', 'carlos456');
+END;
+/
+
+BEGIN
+    insertar_especialidad('matematicas');
+    insertar_especialidad('programacion');
+    insertar_especialidad('fisica');
+    insertar_especialidad('quimica');
+    insertar_especialidad('biologia');
+END;
+/
+
+BEGIN
+    insertar_especialidad('estadistica');
+END;
+/
+
+BEGIN
+    insertar_curso('Calculo I', 'Introduccion al calculo diferencial e integral', 14, 2, 1);
+    insertar_curso('Programacion en Python', 'Aprende programacion con Python desde cero', 10, 1, 1);
+    insertar_curso('Physics for Engineers', 'Conceptos basicos de fisica para ingenieros', 12, 3, 2);
+    insertar_curso('Data Structures', 'Estructuras de datos y algoritmos', 11, 2, 2);
+    insertar_curso('Web Development', 'Desarrollo web con HTML, CSS y JavaScript', 9, 1, 3);
+END;
+/
+
+BEGIN
+    insertar_profesores('Juan', 'Perez', TO_DATE('1980-05-15', 'YYYY-MM-DD'), 'juan.perez@example.com', 'password123', 1, 2, 61234567, 1);
+    insertar_profesores('Maria', 'Gomez', TO_DATE('1982-08-22', 'YYYY-MM-DD'), 'maria.gomez@example.com', 'mypassword', 2, 3, 61234888, 2);
+    insertar_profesores('Luis', 'Sanchez', TO_DATE('1979-12-01', 'YYYY-MM-DD'), 'luis.sanchez@example.com', 'luis123', 3, 1, 61234999, 3);
+    insertar_profesores('Laura', 'Diaz', TO_DATE('1985-03-11', 'YYYY-MM-DD'), 'laura.diaz@example.com', 'password456', 1, 4, 61234000, 4);
+    insertar_profesores('Carlos', 'Garcia', TO_DATE('1990-06-25', 'YYYY-MM-DD'), 'carlos.garcia@example.com', 'carlosPass', 2, 5, 61234111, 5);
+END;
+/
+
+
+BEGIN
+    insertar_usuarios_curso(1, 1);
+    insertar_usuarios_curso(2, 1);
+    insertar_usuarios_curso(3, 2);
+    insertar_usuarios_curso(4, 3);
+    insertar_usuarios_curso(5, 4);
+END;
+/
+
+--BEGIN
+    --insertar_profesor_curso(1, 1);
+    --insertar_profesor_curso(2, 2);
+    --insertar_profesor_curso(3, 3);
+    --insertar_profesor_curso(4, 4);
+    --insertar_profesor_curso(5, 5);
+--END;
+--/
+
+BEGIN
+    insertar_lecciones('Leccion 1', 'Introduccion a Calculo', 2, 1);
+    insertar_lecciones('Leccion 2', 'Limites y Continuidad', 3, 1);
+    insertar_lecciones('Leccion 3', 'Derivadas', 4, 1);
+    insertar_lecciones('Leccion 4', 'Integrales', 5, 1);
+    insertar_lecciones('Leccion 5', 'Aplicaciones de Integrales', 5, 1);
+END;
+/
+
+-- Bloque anónimo para llamar al procedimiento insertar_lecciones
+BEGIN
+    insertar_lecciones('Leccion 7', 'int Calculo 3', 2, 1);
+END;
+/ 
+
+BEGIN
+    insertar_problemas('Opcion A', 'Opcion B', 'Opcion C', 'Opcion A', 1);
+    insertar_problemas('Opcion D', 'Opcion E', 'Opcion F', 'Opcion D', 2);
+    insertar_problemas('Opcion G', 'Opcion H', 'Opcion I', 'Opcion G', 3);
+    insertar_problemas('Opcion J', 'Opcion K', 'Opcion L', 'Opcion J', 4);
+    insertar_problemas('Opcion M', 'Opcion N', 'Opcion O', 'Opcion M', 5);
+END;
+/
+
+BEGIN
+    insertar_usuario_problema(1, 1, TO_DATE('2024-06-01', 'YYYY-MM-DD'), 85);
+    insertar_usuario_problema(2, 2, TO_DATE('2024-06-02', 'YYYY-MM-DD'), 90);
+    insertar_usuario_problema(3, 3, TO_DATE('2024-06-03', 'YYYY-MM-DD'), 75);
+    insertar_usuario_problema(4, 4, TO_DATE('2024-06-04', 'YYYY-MM-DD'), 80);
+    insertar_usuario_problema(5, 5, TO_DATE('2024-06-05', 'YYYY-MM-DD'), 95);
+END;
+/
