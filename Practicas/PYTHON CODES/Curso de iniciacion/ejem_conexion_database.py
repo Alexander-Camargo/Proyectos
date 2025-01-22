@@ -5,4 +5,8 @@ mydb = mysql.connector.connect(
     password="",
 )
 
+cursor = mydb.cursor()
+
+#sql = "CREATE DATABASE IF NOT EXISTS db_prueba"
+
 print(mydb)
